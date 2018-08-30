@@ -1,0 +1,30 @@
+
+<nav class="navbar container-fluid navbar-expand-md bg-dark navbar-dark">
+
+  <a class="navbar-brand navbar_brand" routerLink="/dashbord">Iface Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item nav_text">
+        <a class="nav-link" routerLink="/dashbord" routerLinkActive="active">Home</a>
+      </li>
+      <li  class="nav-item nav_text">
+        <a class="nav-link" routerLink="/book_list" routerLinkActive="active">Books</a>
+      </li>
+      <li  class="nav-item nav_text">
+        <a class="nav-link" routerLink="/issue_book_list" routerLinkActive="active">IssueBooks</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+      <li  class="nav-item nav_text open_dialog">
+        <a class="nav-link"  (click)="loginDialog()" routerLinkActive="active">Login</a>
+      </li>
+      <li  class="nav-item nav_text">
+        <a class="nav-link" routerLink="/register" routerLinkActive="active">Setting</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>

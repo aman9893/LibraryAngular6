@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+.button {
+  outline: none;
+}
+
+.add_empolyee {
+  float: left;
+  position: fixed;
+  bottom: 8px;
+  right: 22px;
+  cursor: pointer;
+}
+
+.add_empolyee button {
+  outline: none;
+}
+
+.delete_mat_icon {
+  cursor: pointer;
+}
+
+.width_100 {
+  width: 90%;
+}
+
+.float_right {
+  float: right;
+}
+
+.dialog_box_container {
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.green_btn {
+  width: 22px !important;
+  height: 22px !important;
+  outline: none !important;
+  background: forestgreen !important;
+}
+
+.red_btn {
+  width: 22px !important;
+  height: 22px !important;
+  outline: none !important;
+  background: red !important;
+}
+
+.list_table td {
+  cursor: pointer !important;
+}
+
+.width_50 {
+  width: 45%;
+}
+
+.emaillink a {
+  color: white;
+  font-size: 15px;
+}
+
+.emaillink a:hover {
+  color: white;
+  font-size: 16px;
+}

@@ -1,0 +1,11 @@
+<h2 mat-dialog-title *ngIf="updatedata.emp_name" >{{updatedata.emp_name |titlecase}} </h2>
+<form [formGroup]="contactForm" novalidate>
+<div class="dialog_box_container">
+    <mat-checkbox  formControlName="bookstatus" >Are you submit this book?</mat-checkbox>
+</div>
+
+<mat-dialog-actions class="float_right form_buttons">
+<button mat-raised-button (click)="closeDialog('cancel')" class="uppercase_button cancel_btn">Cancel</button>
+<button mat-raised-button  color="primary"   type="submit"  [disabled]="!contactForm.valid"  (click)="onSubmit()"  class="uppercase_button save_btn">Save</button>
+</mat-dialog-actions>
+</form>

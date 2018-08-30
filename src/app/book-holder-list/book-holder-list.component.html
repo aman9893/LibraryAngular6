@@ -1,0 +1,58 @@
+<div class="container=fuild">
+  <mat-toolbar>All Empolyee({{people_length}})
+  </mat-toolbar>
+  <table class="table list_table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Empolyee Name</th>
+        <th>Book Number</th>
+        <th>Book name</th>
+        <th>email</th>
+        <th>Issue Date</th>
+        <th>Return Date</th>
+        <th> Status </th>
+        <th> </th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let people of peoples" (click)="upadateEmpDialog(people)">
+        <td>{{people.id}}</td>
+        <td>{{people.emp_name}}</td>
+        <td>{{people.book_number}}</td>
+        <td>{{people.book_name}}</td>
+        <td class="emaillink">
+          <a (click)=stopPropagation($event) href="https://mail.google.com/mail/?view=cm&fs=1&to={{people.email}}">{{people.email}}</a>
+        </td>
+        <td>{{people.return_date}}</td>
+        <td>{{people.date }}</td>
+
+        <td *ngIf="people.book_flag === 1">
+          <button class="green_btn" mat-mini-fab color="primary"></button>
+        </td>
+        <td *ngIf="people.book_flag === 0">
+          <button class="red_btn" mat-mini-fab color="warn"></button>
+        </td>
+        <td>
+          <mat-icon (click)=stopPropagation($event) (click)="upadateEmpDetailsDialog(people)">edit</mat-icon>
+        </td>
+        <td>
+          <mat-icon class="delete_mat_icon" (click)="deleteEmpDialog(people.id)">delete</mat-icon>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="add_empolyee">
+  <button (click)="createEmpDialog()" mat-fab color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+<mat-toolbar>
+    <div class="copyright">
+         <div class="row text_center">
+         	<p> Iface Copyright © 2017 All rights reserved</p>
+         </div>
+    </div>
+</mat-toolbar>

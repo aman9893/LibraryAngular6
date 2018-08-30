@@ -1,0 +1,11 @@
+.copyright{
+    float: left;
+    width: 100%;
+}
+.copyright p{
+   font-size: 16px;
+   padding: 16px 0 10px 11px;
+}
+.text_center{
+  background: white;
+}

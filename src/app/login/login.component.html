@@ -1,0 +1,62 @@
+<div *ngIf="loginPage"   class="login">
+<form [formGroup]="" novalidate>
+        <h3 class="heading-desc">
+          <button type="button" class="close pull-right" aria-hidden="true">×</button>
+          Login  Iface Library</h3>
+        <div class="social-box">
+          <div class="row mg-btm">
+            <div class="col-md-12">
+              <a href="#" class="btn btn-primary btn-block">
+                <i class="icon-facebook"></i>Login with Facebook
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <a href="#" class="btn  google_btn btn-block">
+                <i class="icon-twitter"></i>Login with Google
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+
+          <input type="text" class="form-control" placeholder="Email" autofocus>
+          <br>
+          <input type="password" class="form-control" placeholder="Password">
+          <div class="">
+              <button type="submit" class="btn login_btn btn-large btn-danger pull-right">Login</button>
+            </div>
+        </div>
+        <div class="login-footer">
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <div class="left-section">
+                <a href="">Forgot your password?</a>
+                <a (click)="register()">Sign up now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+<div *ngIf="regitserPage"  class="register">
+
+      <div class="main">
+        <h4>Register Here</h4>
+
+          <input type="text" class="form-control" placeholder="Name" autofocus>
+          <br>
+          <input type="email" class="form-control" placeholder="Email">
+          <br>
+          <input type="tel" class="form-control" placeholder="Phone Number">
+          <br>
+          <input type="password" class="form-control" placeholder="Password">
+          <br>
+          <div class="">
+              <button type="submit" class="btn login_btn btn-large btn-primary pull-right">Register</button>
+              <button type="submit" (click)="login()" class="btn login_btn btn-large btn-danger pull-right">Login</button>
+            </div>
+        </div>
+</div>

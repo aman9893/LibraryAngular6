@@ -1,0 +1,36 @@
+
+<div class="container=fuild">
+    <mat-toolbar>All Books({{book_length}})
+
+      </mat-toolbar>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Book Name</th>
+        <th>Book Number</th>
+        <th>Issue Book </th>
+        <th>Auther</th>
+        <th>  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookslist" >
+        <td>{{book.id}}</td>
+        <td>{{book.book_name}}</td>
+        <td>{{book.book_number}}</td>
+        <td>{{book.empolyee_name}}</td>
+        <td>{{book.auther}}</td>
+        <td><mat-icon >edit</mat-icon></td>
+        <td><mat-icon class="delete_mat_icon" (click)="deleteEmpDialog(book.id)"
+           >delete</mat-icon></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+ <div class="add_empolyee">
+    <button (click)="createEmpDialog()"
+     mat-fab color="primary"><mat-icon>add</mat-icon></button>
+  </div>
